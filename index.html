@@ -83,7 +83,9 @@
     [data-hero-grid]{grid-template-columns:1fr!important;gap:0!important;}
     [data-hero-visual]{display:none!important;}
     [data-hero-name]{bottom:30vh!important;}
-    [data-hero-name] h1{font-size:44vw!important;}
+    [data-hero-name] h1,[data-hero-name] span{font-size:22vw!important;}
+    [data-light-rig] [data-beam]:nth-child(1){background:radial-gradient(ellipse at 50% 50%, rgba(255,252,246,.88) 0%, rgba(255,236,196,.52) 8%, rgba(247,190,106,.30) 17%, rgba(214,141,58,.145) 30%, rgba(158,92,32,.055) 50%, rgba(96,54,18,.015) 64%, transparent 78%)!important;}
+    [data-light-rig] [data-beam]:nth-child(2){background:radial-gradient(ellipse at 50% 50%, rgba(255,222,164,.36) 0%, rgba(232,158,72,.13) 20%, rgba(150,86,30,.03) 34%, transparent 52%)!important;}
     [data-stack-card]{grid-template-columns:1fr!important;min-height:0!important;}
     [data-stack-card] [data-stack-cover]{order:-1;min-height:190px;}
     [data-cap-band]{grid-template-columns:1fr 1fr!important;}
@@ -94,6 +96,9 @@
     [data-row]:hover [data-row-body]{transform:none!important;}
     [data-section]{padding-left:22px!important;padding-right:22px!important;}
     [data-nav]{padding-left:22px!important;padding-right:22px!important;}
+    #work{padding-top:54px!important;padding-bottom:34px!important;}
+    #skills{padding-top:46px!important;padding-bottom:36px!important;}
+    #contact{padding-top:72px!important;padding-bottom:104px!important;}
   }
 </style>
 <script src="./image-slot.js"></script>
@@ -394,7 +399,7 @@
     <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);max-width:1600px;margin:0 auto;">
       <div data-hoverframe="" style="position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#14181d 0%,#0f1216 100%);border:1px solid rgba(255,255,255,.14);box-shadow:0 50px 110px -46px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.08);">
         <div style="position:relative;overflow:hidden;aspect-ratio:16/9;background:#0c0e11;">
-          <img src="assets/screens-overview.jpg" alt="BACCA.AI platform screens: dashboard, alerts, investigation, incident record and workflow builder" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="assets/screens-overview.png" alt="BACCA.AI platform screens: dashboard, alerts, investigation, incident record and workflow builder" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
         </div>
       </div>
       <p style="margin:16px 0 0;font-size:13px;color:#6c7077;letter-spacing:.01em;">The platform at a glance.</p>
@@ -549,7 +554,7 @@
       </div>
 
       <div data-hoverframe="" style="margin-top:clamp(34px,4.4vw,60px);position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#14181d 0%,#0f1216 100%);border:1px solid rgba(255,255,255,.14);box-shadow:0 50px 110px -46px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.08);">
-        <img src="assets/configurations.jpg" alt="Two decisions in the rebuilt Configurations surface: values readable on the page, and controls matched to how long the thing they edit lives" style="display:block;width:100%;height:auto;" />
+        <img src="assets/configurations.png" alt="Two decisions in the rebuilt Configurations surface: values readable on the page, and controls matched to how long the thing they edit lives" style="display:block;width:100%;height:auto;" />
       </div>
     </div>
   </section>
@@ -560,7 +565,7 @@
       <div style="max-width:1180px;">
         <span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#e8e1d3;font-weight:600;">04 — System</span>
         <h2 style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:600;font-size:clamp(28px,3.9vw,54px);line-height:1.07;letter-spacing:-.025em;color:#f3f4f6;margin:16px 0 0;text-wrap:balance;">A language the team keeps speaking</h2>
-        <p style="margin:28px 0 0;max-width:62ch;font-size:clamp(15px,1.3vw,17px);line-height:1.68;color:#8b8f96;text-wrap:pretty;">Six areas and three detail surfaces, one designer. Nothing scales unless the decisions live outside the file, so colour, type and elevation were documented as variables and every screen inherits them, including the ones the client builds after us.</p>
+        <p style="margin:28px 0 0;max-width:62ch;font-size:clamp(15px,1.3vw,17px);line-height:1.68;color:#8b8f96;text-wrap:pretty;">One designer across the whole product. Nothing scales unless the decisions live outside the file, so colour, type and elevation were documented as variables and every screen inherits them, including the ones the client builds after us.</p>
       </div>
       <div style="margin-top:clamp(34px,4.4vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(18px,2vw,26px);align-items:start;">
         <div data-hovercard="" style="border-radius:18px;border:1px solid rgba(255,255,255,.09);background:#0d0f12;overflow:hidden;display:flex;flex-direction:column;">
@@ -761,7 +766,7 @@
       </div>
 
       <div data-hoverframe="" style="margin-top:clamp(28px,3.2vw,44px);position:relative;border-radius:18px;overflow:hidden;background:#0a0c0f;border:1px solid rgba(255,255,255,.14);box-shadow:0 50px 110px -46px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.06);">
-        <img src="assets/worked-example.jpg" alt="The worked example: the request arriving in Slack on Jul 3, the client alignment call on Jul 6, the prototype link shared the same evening, and the clickable prototype it pointed at" style="display:block;width:100%;height:auto;" />
+        <img src="assets/worked-example.png" alt="The worked example: the request arriving in Slack on Jul 3, the client alignment call on Jul 6, the prototype link shared the same evening, and the clickable prototype it pointed at" style="display:block;width:100%;height:auto;" />
       </div>
       <p style="margin:18px 0 0;font-size:13px;color:#6c7077;">The whole loop, from one Slack line to a page the client clicked: no deck, no redlines, no separate spec.</p>
     </div>
